@@ -1,10 +1,13 @@
+characters <- read.csv("data/characters.csv")
+
 intro_panel <- tabPanel(
-    "[Tab Title]",
-    titlePanel("[Page Title]"),
-    img(src = "[img source]"),
-    p("[Summary text for page]"),
-    p(a(href = "[url]", "[Link Tezt]"))
+    "Introduction",
+    titlePanel("Introduction"),
+    p("Put stuff here that will introduce the user")
 )
+
+select_values <- colnames(characters)
+select_values <- select_values[!select_values %in% c("Character", "Class")]
 
 sidebar_content <- sidebarPanel(
     selectInput(
@@ -20,15 +23,13 @@ main_content <- mainPanel(
 )
 
 second_panel <- tabPanel(
-    "[Tab Title]",
-    titlePanel("[Page Title]"),
-    sidebarLayout(
-        sidebar_content, main_content
-    )
+    "Graph",
+    titlePanel("Click for graph stuff"),
+    sidebarLayout(sidebar_content, main_content)
 )
 
 ui <- navbarPage(
-    "[Nav Bar Title]",
+    "Nicholas' Test Page",
     intro_panel,
     second_panel
 )
