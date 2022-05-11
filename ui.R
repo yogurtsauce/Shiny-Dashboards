@@ -13,8 +13,7 @@ sidebar_content <- sidebarPanel(
     selectInput(
         "y_var",
         label = "Y Variable",
-        choices = select_values,
-        selected = "Speed"
+        choices = select_values
     )
 )
 
