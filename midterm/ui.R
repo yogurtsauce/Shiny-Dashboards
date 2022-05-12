@@ -10,7 +10,9 @@ introPage <- tabPanel(
 
 # page 2
 selectValues <- names(data)
-selectValues <- selectValues[!selectValues %in% c("track_id", "track_album_id", "playlist_id")]
+selectValues <- selectValues[
+    !selectValues %in% c("track_id", "track_album_id", "playlist_id")
+]
 
 rawDataSideBar <- sidebarPanel(
     conditionalPanel(
@@ -41,9 +43,6 @@ rawDataPage <- tabPanel(
     titlePanel("Raw Data"),
     sidebarLayout(rawDataSideBar, rawDataMain)
 )
-
-
-
 
 
 # load everything to UI
