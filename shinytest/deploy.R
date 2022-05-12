@@ -1,3 +1,3 @@
 library(rsconnect)
 
-rsconnect::deployApp("/home/nicholas/code/dashboard example")
+rsconnect::deployApp("/home/nicholas/code/dashboard example/shinytest")

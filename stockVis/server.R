@@ -1,3 +1,8 @@
+library(shiny)
+library(quantmod)
+
+source("helpers.R")
+
 server <- function(input, output) {
     dataInput <- reactive({
         getSymbols(

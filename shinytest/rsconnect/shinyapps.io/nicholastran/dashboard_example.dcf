@@ -5,7 +5,7 @@ account: nicholastran
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6277861
-bundleId: 5893760
+bundleId: 5897486
 url: https://nicholastran.shinyapps.io/dashboard_example/
-when: 1652249491.11928
-lastSyncTime: 1652249491.11931
+when: 1652317157.82582
+lastSyncTime: 1652317157.82583

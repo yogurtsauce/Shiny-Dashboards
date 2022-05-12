@@ -1,3 +1,8 @@
+library(maps)
+library(mapproj)
+counties <- readRDS("data/counties.rds")
+source("helpers.R")
+
 server <- function(input, output) {
     output$map <- renderPlot({
         args <- switch(input$var,
