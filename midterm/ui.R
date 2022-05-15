@@ -78,7 +78,11 @@ rawDataPage <- tabPanel(
 # page 3
 sourceCode <- tabPanel(
     "Source Code",
-    h1(strong("Source Code"))
+    h1(strong("Source Code")),
+    tags$a(
+        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/midterm",
+        "Link to Github Repo"
+    )
 )
 
 
