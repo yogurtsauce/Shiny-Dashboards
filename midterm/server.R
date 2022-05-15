@@ -15,6 +15,4 @@ server <- function(input, output) {
             )
         )
     })
-
-    # sorted columns are colorized
 }
