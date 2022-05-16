@@ -5,7 +5,7 @@ account: nicholastran
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6306956
-bundleId: 5909207
+bundleId: 5909220
 url: https://nicholastran.shinyapps.io/midterm/
-when: 1652667633.51794
-lastSyncTime: 1652667633.51799
+when: 1652668151.25687
+lastSyncTime: 1652668151.25691
