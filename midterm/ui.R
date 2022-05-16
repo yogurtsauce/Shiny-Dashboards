@@ -11,7 +11,9 @@ introPage <- tabPanel(
     h2(strong("Purpose")),
     p(
         "Analytics and visualization on a data set named",
-        strong("Global Music Data"), "."
+        strong("Global Music Data"),
+        " that can be obtained through spotify's API (I downloaded a
+        .csv provided by my Prof).", 
     ),
     p(
         "The data set can give us insights on how which factors can impact
@@ -26,6 +28,9 @@ introPage <- tabPanel(
         to work with, and artists can evaluate how to manipulate their music
         to make it more popular."
     ),
+    br(),
+    h2(strong("The Data")),
+    uiOutput("link1"),
     br(),
     h2(strong("Method")),
     br(),
