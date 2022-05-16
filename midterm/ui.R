@@ -32,58 +32,26 @@ introPage <- tabPanel(
     h2(strong("Dependencies")),
 )
 
-
-# page 2 stuff
-selectValues <- names(data)
-selectValues <- selectValues[
-    !selectValues %in% c("track_id", "track_album_id", "playlist_id")
-]
-
-# page 2 sidebar
-rawDataSideBar <- sidebarPanel(
-    conditionalPanel(
-        "selectColumns",
-        checkboxGroupInput(
-            "showVars",
-            "Columns in diamonds to show:",
-            choices = selectValues,
-            selected = selectValues
-        )
-    ),
-    width = 2
-)
-
-
-# page 2 main content
-rawDataMain <- mainPanel(
-    tabsetPanel(
-        id = "dataset",
-        tabPanel(
-            "Global Music",
-            DT::dataTableOutput("mytable1"),
-            width = "100%"
-        )
-    )
-)
-
 # actual page 2
 rawDataPage <- tabPanel(
     "Raw Data",
-    h1(strong("Raw Data (takes a while to load when not local)")),
+    h1(strong("Raw Data")),
     tags$hr(style = "border-color: white;"),
-    sidebarLayout(rawDataSideBar, rawDataMain),
+    fluidRow(
+        column(12, dataTableOutput("mytable1"))
+    )
 )
 
 
 # page 3
-sourceCode <- tabPanel (
+sourceCode <- tabPanel(
     "Source Code",
     h1(strong("Source Code")),
-    tags$a (
+    tags$a(
         href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/midterm",
-            "Link to Github Repo",
-        target="_blank",
-        rel="noopener noreferrer"
+        "Link to Github Repo",
+        target = "_blank",
+        rel = "noopener noreferrer"
     )
 )
 
