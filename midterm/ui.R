@@ -2,12 +2,15 @@ library(DT)
 library(shinythemes)
 
 data <- read.csv("data/GlobalMusicData.csv")
+dirtydata <- read.csv("data/GlobalMusicData_dirty.csv")
 
 # page 1
 introPage <- tabPanel(
     "Introduction",
     h1(strong("Introduction")),
     tags$hr(style = "border-color: white;"),
+
+    # purpose
     h2(strong("Purpose")),
     p(
         "Analytics and visualization on a data set named",
@@ -21,6 +24,8 @@ introPage <- tabPanel(
         the key, tempo, and etc."
     ),
     br(),
+    #
+
     h4(strong("Who can use this analysis?")),
     p(
         "Anyone can! You can use this just for knowledge and fun,
@@ -29,6 +34,8 @@ introPage <- tabPanel(
         to make it more popular."
     ),
     br(),
+    #
+    # the process
     h4(strong("The process")),
     p(
         "It would be nice and simple if we could collect data and immediately
@@ -46,11 +53,17 @@ introPage <- tabPanel(
         tags$li("Visualize the data (present your story to readers)")
     ),
     br(),
+
+    # dependencies
     h2(strong("Dependencies")),
     br(),
+
+    # the data
     h2(strong("The Data")),
     uiOutput("link1"),
     br(),
+
+    # proposed method
     h2(strong("Proposed Method")),
 )
 
