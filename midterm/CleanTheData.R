@@ -1,6 +1,7 @@
 # init dependencies
 library(tidyverse)
 
+
 # vars/objects
 data <- read.csv("midterm/data/GlobalMusicData.csv")
 cleanDataDir <- "midterm/data/GlobalMusicData_clean.csv"
@@ -21,13 +22,27 @@ for (names in names(data)) {
 }
 names(data)
 
-# append column names to var
+# append column names to var in reverse order
 for (name in names(data[23:1])) {
     dirtyDataNames <- append(name, dirtyDataNames)
 }
 # assign
 data <- subset(data, , select = dirtyDataNames)
 
+
+# summaries
+str(data)
+summary(data)
+colSums(is.na(data))
+
+
+# change data type of release date to "date"
+as.Date(data$track_album_release_date)
+str(data)
+
+######################
+# making the new csv #
+######################
 
 # check if file exists. if yes then delete and make a new one
 newCsvFunc <- function() {
@@ -42,6 +57,7 @@ newCsvFunc <- function() {
                 quote = FALSE,
                 sep = ",",
                 row.names = FALSE,
+                eol = "",
                 col.names = c(
                     "TrackName",
                     "TrackPopularity",
