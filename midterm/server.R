@@ -1,7 +1,7 @@
 library(DT)
 
-data <- read.csv("data/GlobalMusicData.csv")
-dirtydata <- read.csv("data/GlobalMusicData_dirty.csv")
+data <- read.csv("data/GlobalMusicData_clean.csv")
+
 
 
 server <- function(input, output, session) {

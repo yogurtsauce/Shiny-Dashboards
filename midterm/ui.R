@@ -1,8 +1,8 @@
 library(DT)
 library(shinythemes)
 
-data <- read.csv("data/GlobalMusicData.csv")
-dirtydata <- read.csv("data/GlobalMusicData_dirty.csv")
+data <- read.csv("data/GlobalMusicData_clean.csv")
+
 
 # page 1
 introPage <- tabPanel(
