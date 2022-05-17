@@ -100,11 +100,21 @@ server <- function(input, output, session) {
         href = "https://dplyr.tidyverse.org/",
         target = "_blank",
         rel = "noopener noreferrer"
-    ) 
+    )
+    
     output$dep1 <- renderUI({
         tagList("I used dyplr for the 'pipe' functionality. Link:", url2)
     })
 
+    repoUrl <- a("Github Repo",
+        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/midterm",
+        target = "_blank",
+        rel = "noopener noreferrer"
+    )
+
+    output$myrepo <- renderUI({
+        tagList("", repoUrl)
+    })
 
 
     # table to describe the data

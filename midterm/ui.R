@@ -168,8 +168,8 @@ newCsvFunc()
         "and the structure of the data using",
         tags$code("str(cleanCsv)"), "to get:"
     ),
-    img(src = "summarycode.png"),
-    img(src = "strcode.png"),
+    img(src = "images/summarycode.png"),
+    img(src = "images/strcode.png"),
     p(
         "I was not concerned about the data types because they're
         either string or int/float. I decided to keep floats at the same
@@ -195,6 +195,12 @@ newCsvFunc()
         I might grab more info from the API. I'm not sure 
         what else I need to know but I'm sure I will figure it out."
     ),
+    br(),
+    br(),
+    br(),
+    br(),
+    br(),
+    uiOutput("myrepo"),
 )
 
 # actual page 2
