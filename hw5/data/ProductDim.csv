@@ -1,0 +1,25 @@
+ProductKey,productid,name,category,price
+1,P1,Almonds,Dried Fruit & Nuts,10
+2,P10,Crab Meat,Canned Meat,18
+3,P11,Curry Sauce,Sauces,40
+4,P12,Dried Apples,Dried Fruit & Nuts,53
+5,P13,Dried Pears,Dried Fruit & Nuts,30
+6,P14,Dried Plums,Dried Fruit & Nuts,4
+7,P15,Fruit Cocktail,Fruit & Veg,39
+8,P16,Gnocchi,Pasta,38
+9,P17,Green Tea,Beverages,3
+10,P18,Long Grain Rice,Grains,7
+11,P19,Marmalade,Jams, Preserves,81
+12,P2,Beer,Beverages,14
+13,P20,Mozzarella,Dairy Products,35
+14,P21,Olive Oil,Oil,21
+15,P22,Ravioli,Pasta,20
+16,P23,Scones,Baked Goods & Mixes,10
+17,P24,Syrup,Condiments,10
+18,P3,Boysenberry Spread,Jams, Preserves,25
+19,P4,Cajun Seasoning,Condiments,22
+20,P5,Chai,Beverages,18
+21,P6,Chocolate,Candy,13
+22,P7,Chocolate Biscuits Mix,Baked Goods & Mixes,9
+23,P8,Clam Chowder,Soups,10
+24,P9,Coffee,Beverages,46

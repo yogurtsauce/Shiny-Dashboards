@@ -1,3 +1,4 @@
 library(shiny)
 
-runApp(appDir = "hw5", display.mode = "showcase")
+options(shiny.autoreload = TRUE)
+runApp(appDir = "hw5")

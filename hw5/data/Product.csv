@@ -1,0 +1,25 @@
+ProductID,ProductName,Category,Price
+P1,Almonds,Dried Fruit & Nuts,$10.00
+P10,Crab Meat,Canned Meat,$18.40
+P11,Curry Sauce,Sauces,$40.00
+P12,Dried Apples,Dried Fruit & Nuts,$53.00
+P13,Dried Pears,Dried Fruit & Nuts,$30.00
+P14,Dried Plums,Dried Fruit & Nuts,$3.50
+P15,Fruit Cocktail,Fruit & Veg,$39.00
+P16,Gnocchi,Pasta,$38.00
+P17,Green Tea,Beverages,$2.99
+P18,Long Grain Rice,Grains,$7.00
+P19,Marmalade,Jams, Preserves,$81.00
+P2,Beer,Beverages,$14.00
+P20,Mozzarella,Dairy Products,$34.80
+P21,Olive Oil,Oil,$21.35
+P22,Ravioli,Pasta,$19.50
+P23,Scones,Baked Goods & Mixes,$10.00
+P24,Syrup,Condiments,$10.00
+P3,Boysenberry Spread,Jams, Preserves,$25.00
+P4,Cajun Seasoning,Condiments,$22.00
+P5,Chai,Beverages,$18.00
+P6,Chocolate,Candy,$12.75
+P7,Chocolate Biscuits Mix,Baked Goods & Mixes,$9.20
+P8,Clam Chowder,Soups,$9.65
+P9,Coffee,Beverages,$46.00

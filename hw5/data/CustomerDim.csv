@@ -1,0 +1,16 @@
+Customerkey,customerid,Name,address,city,state,zip,country
+1,C1,Ace Trading Company,123 1st Street,Seattle,WA,99999,USA
+2,C10,J n' J's Grocery,123 10th Street,Chicago,IL,99999,USA
+3,C11,Twin Peaks Trading Co.,123 11th Street,Miami,FL,99999,USA
+4,C12,Lion's Co.,123 12th Street,Las Vegas,NV,99999,USA
+5,C25,Yellow House Ltd.,789 25th Street,Chicago,IL,99999,USA
+6,C26,Zion's International Market,789 26th Street,Miami,FL,99999,USA
+7,C27,Cash n Carry,789 27th Street,Las Vegas,NV,99999,USA
+8,C28,Bob's Market,789 28th Street,Memphis,TN,99999,USA
+9,C29,CiCi's Grocery,789 29th Street,Denver,CO,99999,USA
+10,C3,Chinet General Store,123 3rd Street,Los Angelas,CA,99999,USA
+11,C4,Domingo's,123 4th Street,New York,NY,99999,USA
+12,C6,Frank's General Store,123 6th Street,Milwaukee,WI,99999,USA
+13,C7,Western Family Store,123 7th Street,Boise,ID,99999,USA
+14,C8,Hammer Miller's Market,123 8th Street,Portland,OR,99999,USA
+15,C9,Rosetto's,123 9th Street,Salt Lake City,UT,99999,USA
