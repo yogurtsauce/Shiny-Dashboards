@@ -21,10 +21,10 @@ pageOne <- tabPanel(
 pageTwo <- tabPanel(
     "Visualization",
     tabsetPanel(
-        tabPanel("Sales / Month"),
-        tabPanel("Sales / Region"),
-        tabPanel("Sales / Product"),
-        tabPanel("Sales / Sales Person")
+        tabPanel("Sales / Month", plotOutput("salesPerMonthGraph")),
+        tabPanel("Sales / Region", plotOutput("salesPerRegionGraph")),
+        tabPanel("Sales / Product", plotOutput("salesPerProductGraph")),
+        tabPanel("Sales / Sales Person", plotOutput("salesPerSalesPersonGraph"))
     )
 )
 

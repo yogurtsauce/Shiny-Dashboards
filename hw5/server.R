@@ -1,6 +1,7 @@
 library(shinythemes)
 
 source("code/ImportData.R")
+source("code/Graphs.R")
 
 server <- function(input, output, session) {
     output$customerTable <- renderDT(
@@ -172,4 +173,24 @@ server <- function(input, output, session) {
             ))
         )
     )
+
+
+    output$salesPerMonthGraph <- renderPlot(
+        salesPerMonthGraph
+    )
+
+    output$salesPerRegionGraph <- renderPlot(
+        salesPerRegionGraph
+    )
+
+    output$salesPerProductGraph <- renderPlot(
+        salesPerProductGraph
+    )
+
+    output$salesPerSalesPersonGraph <- renderPlot(
+        salesPerSalesPersonGraph
+    )
+
+
+
 }
