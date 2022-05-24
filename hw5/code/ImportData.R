@@ -1,0 +1,11 @@
+library(tidyverse)
+
+calendarDim <- read_csv("data/CalendarDim.csv")
+customer <- read_csv("data/Customer.csv")
+customerDim <- read_csv("data/CustomerDim.csv")
+product <- read_csv("data/Product.csv")
+productDim <- read_csv("data/ProductDim.Csv")
+salesFact <- read_csv("data/SalesFactTable.csv")
+salesOrder <- read_csv("data/SalesOrder.csv")
+salesPerson <- read_csv("data/SalesPerson.csv")
+salesPersonDim <- read_csv("data/SalesPersonDim")
