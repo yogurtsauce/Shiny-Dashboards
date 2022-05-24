@@ -19,7 +19,13 @@ pageOne <- tabPanel(
 
 
 pageTwo <- tabPanel(
-    "Visualization"
+    "Visualization",
+    tabsetPanel(
+        tabPanel("Sales / Month"),
+        tabPanel("Sales / Region"),
+        tabPanel("Sales / Product"),
+        tabPanel("Sales / Sales Person")
+    )
 )
 
 
