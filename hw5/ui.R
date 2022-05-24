@@ -10,6 +10,10 @@ pageOne <- tabPanel(
         it into a data warehouse using a star schema. The operational database
         was created and populated using SQL. I then used SQL to create the
         tables for the star schema and populated them."
+    ),
+    tags$a(
+        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/hw5", # nolint
+        "Source Code"
     )
 )
 
