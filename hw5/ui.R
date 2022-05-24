@@ -13,6 +13,10 @@ pageOne <- tabPanel(
         was created and populated using SQL. I then used SQL to create the
         tables for the star schema and populated them."
     ),
+    p(
+        "You can view visualizations, operational tables, and the data warehouse
+        tables in their respective tabs."
+    ),
     tags$a(
         href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/hw5", # nolint
         "Source Code"
