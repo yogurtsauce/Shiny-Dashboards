@@ -20,12 +20,25 @@ pageTwo <- tabPanel(
 
 
 pageThree <- tabPanel(
-    "Operational Tables"
+    "Operational Tables",
+    tabsetPanel(
+        tabPanel("Customer", dataTableOutput("customerTable")),
+        tabPanel("Product", dataTableOutput("productTable")),
+        tabPanel("SalesOrder", dataTableOutput("salesOrderTable")),
+        tabPanel("SalesPerson", dataTableOutput("salesPersonTable"))
+    )
 )
 
 
 pageFour <- tabPanel(
-    "Data Warehouse Tables"
+    "Data Warehouse Tables",
+    tabsetPanel(
+        tabPanel("CalendarDim", dataTableOutput("calendarDimTable")),
+        tabPanel("CustomerDim", dataTableOutput("customerDimTable")),
+        tabPanel("ProductDim", dataTableOutput("productDimTable")),
+        tabPanel("SalesFact", dataTableOutput("salesFactTable")),
+        tabPanel("SalesPersonDim", dataTableOutput("salesPersonDimTable"))
+    )
 )
 
 

@@ -1,4 +1,4 @@
-CustomerID,Customername,Address,City,State,ZIPCode,Country
+CustomerID,CustomerName,Address,City,State,ZIPCode,Country
 C1,Ace Trading Company,123 1st Street,Seattle,WA,99999,USA
 C10,J n' J's Grocery,123 10th Street,Chicago,IL,99999,USA
 C11,Twin Peaks Trading Co.,123 11th Street,Miami,FL,99999,USA
