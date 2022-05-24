@@ -10,3 +10,4 @@ source("server.R")
 
 
 shinyApp(ui = ui, server = server)
+runApp(appDir = "census-app")

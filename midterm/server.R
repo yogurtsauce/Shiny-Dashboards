@@ -36,7 +36,6 @@ possibleEntries <- c(
     "0.0-1.0",
     "however fast the song is",
     "however long the song is"
-
 )
 
 colDescription <- c(
@@ -53,9 +52,9 @@ colDescription <- c(
     "Playlist subgenre",
     "How 'danceable' a song is based on tempo, rhythm stability,
     beat strength, and overall regularity - higher is better",
-    "Represents a perceptual measure of intensity and activity 
-    based on dynamic range, perceived loudness, timbre, onset rate, 
-    and general entropy. Songs with higher energy feel faster, 
+    "Represents a perceptual measure of intensity and activity
+    based on dynamic range, perceived loudness, timbre, onset rate,
+    and general entropy. Songs with higher energy feel faster,
     louder, and noisier - higher is better",
     "An estimated key of the track. Uses standard Pitch Class notation
     (0 = C, 1 = C#/Db). If there wasn't a key detected, the value is -1",
@@ -63,12 +62,12 @@ colDescription <- c(
     loudness values are averaged across the song.",
     "1 means the song is in a major key, 0 means it's in minor",
     "How talkative a song is. Above .66 are songs with mostly words,
-    .33-.66 are songs with a mix of music and words, 
+    .33-.66 are songs with a mix of music and words,
     and below are probably songs without words",
-    "Confidence measure of whether the song is acoustic 
+    "Confidence measure of whether the song is acoustic
     - higher means higher confidence",
     "Predicts whether a track contains no vocals. 'Oohs' and 'aahs'
-    are treated as instrumental. - higher means the song is more likely 
+    are treated as instrumental. - higher means the song is more likely
     to have little to no vocal content",
     "Detects the presence of an audience in the recording. .8 most likely
     means the song is live",
@@ -80,7 +79,7 @@ colDescription <- c(
 dataDescriptionTable <- data.frame(
     "VariableNames" = variableName,
     "PossibleEntries" = possibleEntries,
-    "Description" = colDescription
+    "VarDescription" = colDescription
 )
 
 
@@ -101,7 +100,7 @@ server <- function(input, output, session) {
         target = "_blank",
         rel = "noopener noreferrer"
     )
-    
+
     output$dep1 <- renderUI({
         tagList("I used dyplr for the 'pipe' functionality. Link:", url2)
     })
@@ -128,7 +127,7 @@ server <- function(input, output, session) {
 
     # head5 table
     output$head5 <- renderDT(
-        head(data,5),
+        head(data, 5),
         style = "bootstrap",
         options = list(
             dom = "t",
