@@ -48,7 +48,7 @@ pageFour <- tabPanel(
 
 ui <- navbarPage(
     theme = shinytheme("darkly"),
-    "Nicholas' Hw5",
+    "Nicholas' Data Warehouse Project",
     pageOne,
     pageTwo,
     pageThree,
