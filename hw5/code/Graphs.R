@@ -1,4 +1,5 @@
 source("code/ImportData.R")
+source("ui.R")
 
 
 salesPerMonth <- inner_join(
@@ -24,20 +25,3 @@ salesPerSalesPerson <- inner_join(
     salesFact,
     by = "SalesPersonKey"
 )
-
-salesPerMonthGraph <- salesPerMonth %>%
-    ggplot(aes(Month, DollarsSold)) +
-    geom_bar(stat = "identity")
-
-salesPerProductGraph <- salesPerProduct %>%
-    ggplot(aes(Name, DollarsSold)) +
-    geom_bar(stat = "identity") +
-    coord_flip()
-
-salesPerRegionGraph <- salesPerRegion %>%
-    ggplot(aes(Region, DollarsSold)) +
-    geom_bar(stat = "identity")
-
-salesPerSalesPersonGraph <- salesPerSalesPerson %>%
-    ggplot(aes(Name, DollarsSold)) +
-    geom_bar(stat = "identity")

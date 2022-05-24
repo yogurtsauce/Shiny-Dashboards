@@ -1,6 +1,8 @@
 library(DT)
 library(shinythemes)
 
+source("code/ImportData.R")
+
 pageOne <- tabPanel(
     "Introduction",
     h1("Introduction"),
@@ -18,13 +20,75 @@ pageOne <- tabPanel(
 )
 
 
+ychoices <- c("DollarsSold", "QuantitySold")
+
 pageTwo <- tabPanel(
     "Visualization",
     tabsetPanel(
-        tabPanel("Sales / Month", plotOutput("salesPerMonthGraph")),
-        tabPanel("Sales / Region", plotOutput("salesPerRegionGraph")),
-        tabPanel("Sales / Product", plotOutput("salesPerProductGraph")),
-        tabPanel("Sales / Sales Person", plotOutput("salesPerSalesPersonGraph"))
+        tabPanel(
+            "Sales / Month",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput(
+                        "yVar1",
+                        label = "Y Variable:",
+                        choices = ychoices
+                    ),
+                    width = 2
+                ),
+                mainPanel(
+                    plotOutput("salesPerMonthGraph")
+                )
+            )
+        ),
+        tabPanel(
+            "Sales / Region",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput(
+                        "yVar2",
+                        label = "Y Variable:",
+                        choices = ychoices
+                    ),
+                    width = 2
+                ),
+                mainPanel(
+                    plotOutput("salesPerRegionGraph")
+                )
+            )
+        ),
+        tabPanel(
+            "Sales / Product",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput(
+                        "yVar3",
+                        label = "Y Variable:",
+                        choices = ychoices
+                    ),
+                    width = 2
+                ),
+                mainPanel(
+                    plotOutput("salesPerProductGraph")
+                )
+            )
+        ),
+        tabPanel(
+            "Sales / Sales Person",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput(
+                        "yVar4",
+                        label = "Y Variable:",
+                        choices = ychoices
+                    ),
+                    width = 2
+                ),
+                mainPanel(
+                    plotOutput("salesPerSalesPersonGraph")
+                )
+            )
+        )
     )
 )
 

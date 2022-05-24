@@ -176,21 +176,43 @@ server <- function(input, output, session) {
 
 
     output$salesPerMonthGraph <- renderPlot(
-        salesPerMonthGraph
+        salesPerMonth %>%
+            ggplot(aes_string(
+                "Month",
+                input$yVar1,
+                fill = "Month"
+            )) +
+            geom_bar(stat = "identity")
     )
 
     output$salesPerRegionGraph <- renderPlot(
-        salesPerRegionGraph
+        salesPerRegion %>%
+            ggplot(aes_string(
+                "Region",
+                input$yVar2,
+                fill = "Region"
+            )) +
+            geom_bar(stat = "identity")
     )
 
     output$salesPerProductGraph <- renderPlot(
-        salesPerProductGraph
+        salesPerProduct %>%
+            ggplot(aes_string(
+                "ProductName",
+                input$yVar3,
+                fill = "ProductName"
+            )) +
+            geom_bar(stat = "identity") +
+            coord_flip()
     )
 
     output$salesPerSalesPersonGraph <- renderPlot(
-        salesPerSalesPersonGraph
+        salesPerSalesPerson %>%
+            ggplot(aes_string(
+                "SalesPersonName",
+                input$yVar4,
+                fill = "SalesPersonName"
+            )) +
+            geom_bar(stat = "identity")
     )
-
-
-
 }

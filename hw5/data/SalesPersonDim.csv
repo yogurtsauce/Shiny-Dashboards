@@ -1,4 +1,4 @@
-SalesPersonKey,SalesPersonID,Name,Region
+SalesPersonKey,SalesPersonID,SalesPersonName,Region
 1,S1,Andrew Cencini,East
 2,S2,Anne Larsen,South
 3,S3,Jan Kotas,West

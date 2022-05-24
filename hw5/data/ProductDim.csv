@@ -1,4 +1,4 @@
-ProductKey,ProductID,Name,Category,Price
+ProductKey,ProductID,ProductName,Category,Price
 1,P1,Almonds,Dried Fruit & Nuts,10
 2,P10,Crab Meat,Canned Meat,18
 3,P11,Curry Sauce,Sauces,40
