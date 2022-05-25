@@ -35,5 +35,3 @@ allTables <- salesFact %>%
     inner_join(productDim, by = "ProductKey") %>%
     inner_join(salesPersonDim, by = "SalesPersonKey")
 
-ggplot(allTables, aes(Month, DollarsSold)) +
-    geom_bar(stat = "identity")

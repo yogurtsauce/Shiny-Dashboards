@@ -1,7 +1,7 @@
 library(shinythemes)
 
 source("code/ImportData.R")
-source("code/Graphs.R")
+source("code/Joins.R")
 
 server <- function(input, output, session) {
     output$customerTable <- renderDT(
