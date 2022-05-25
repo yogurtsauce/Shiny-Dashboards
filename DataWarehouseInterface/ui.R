@@ -20,7 +20,7 @@ pageOne <- tabPanel(
         tables in their respective tabs."
     ),
     tags$a(
-        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/hw5", # nolint
+        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/DataWarehouseInterface", # nolint
         "Source Code"
     )
 )

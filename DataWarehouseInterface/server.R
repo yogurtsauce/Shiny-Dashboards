@@ -164,6 +164,7 @@ server <- function(input, output, session) {
     )
 
 
+    # salespersondim table
     output$salesPersonDimTable <- renderDT(
         salesPersonDim,
         style = "bootstrap",
@@ -240,7 +241,7 @@ server <- function(input, output, session) {
                 input$yVar5,
                 fill = input$xVar
             )) +
-            geom_bar(stat = "identity") +
+            geom_histogram(stat = "identity") +
             coord_flip()
     )
 }
