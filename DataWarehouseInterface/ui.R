@@ -25,6 +25,7 @@ pageOne <- tabPanel(
 
 
 ychoices <- c("DollarsSold", "QuantitySold")
+xchoices <- c("Month", "Region", "ProductName", "SalesPersonName")
 
 pageTwo <- tabPanel(
     "Visualization",
@@ -90,6 +91,27 @@ pageTwo <- tabPanel(
                 ),
                 mainPanel(
                     plotOutput("salesPerSalesPersonGraph")
+                )
+            )
+        ),
+        tabPanel(
+            "Interactive Table",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput(
+                        "yVar5",
+                        label = "Y Variable:",
+                        choices = ychoices
+                    ),
+                    selectInput(
+                        "xVar",
+                        label = "X Variable:",
+                        choices = xchoices
+                    ),
+                    width = 2
+                ),
+                mainPanel(
+                    plotOutput("interactiveTable")
                 )
             )
         )

@@ -185,6 +185,7 @@ server <- function(input, output, session) {
             geom_bar(stat = "identity")
     )
 
+
     output$salesPerRegionGraph <- renderPlot(
         salesPerRegion %>%
             ggplot(aes_string(
@@ -194,6 +195,7 @@ server <- function(input, output, session) {
             )) +
             geom_bar(stat = "identity")
     )
+
 
     output$salesPerProductGraph <- renderPlot(
         salesPerProduct %>%
@@ -206,6 +208,7 @@ server <- function(input, output, session) {
             coord_flip()
     )
 
+
     output$salesPerSalesPersonGraph <- renderPlot(
         salesPerSalesPerson %>%
             ggplot(aes_string(
@@ -214,5 +217,17 @@ server <- function(input, output, session) {
                 fill = "SalesPersonName"
             )) +
             geom_bar(stat = "identity")
+    )
+
+
+    output$interactiveTable <- renderPlot(
+        allTables %>%
+            ggplot(aes_string(
+                input$xVar,
+                input$yVar5,
+                fill = input$xVar
+            )) +
+            geom_bar(stat = "identity") +
+                coord_flip()
     )
 }

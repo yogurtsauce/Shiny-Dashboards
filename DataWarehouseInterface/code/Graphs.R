@@ -8,11 +8,13 @@ salesPerMonth <- inner_join(
     by = "CalendarKey"
 )
 
+
 salesPerRegion <- inner_join(
     salesPersonDim,
     salesFact,
     by = "SalesPersonKey"
 )
+
 
 salesPerProduct <- inner_join(
     productDim,
@@ -20,8 +22,18 @@ salesPerProduct <- inner_join(
     by = "ProductKey"
 )
 
+
 salesPerSalesPerson <- inner_join(
     salesPersonDim,
     salesFact,
     by = "SalesPersonKey"
 )
+
+allTables <- salesFact %>%
+    inner_join(calendarDim, by = "CalendarKey") %>%
+    inner_join(customerDim, by = "CustomerKey") %>%
+    inner_join(productDim, by = "ProductKey") %>%
+    inner_join(salesPersonDim, by = "SalesPersonKey")
+
+ggplot(allTables, aes(Month, DollarsSold)) +
+    geom_bar(stat = "identity")
