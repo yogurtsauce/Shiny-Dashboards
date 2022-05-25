@@ -108,7 +108,7 @@ pageTwo <- tabPanel(
                         label = "X Variable:",
                         choices = xchoices
                     ),
-                    width = 2
+                    width = 3
                 ),
                 mainPanel(
                     plotOutput("interactiveTable")
