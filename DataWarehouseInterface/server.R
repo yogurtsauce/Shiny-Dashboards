@@ -4,6 +4,7 @@ source("code/ImportData.R")
 source("code/Joins.R")
 
 server <- function(input, output, session) {
+    # customer table
     output$customerTable <- renderDT(
         customer,
         style = "bootstrap",
@@ -23,6 +24,7 @@ server <- function(input, output, session) {
     )
 
 
+    # product table
     output$productTable <- renderDT(
         product,
         style = "bootstrap",
@@ -42,6 +44,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales order table
     output$salesOrderTable <- renderDT(
         salesOrder,
         style = "bootstrap",
@@ -61,6 +64,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales person table
     output$salesPersonTable <- renderDT(
         salesPerson,
         style = "bootstrap",
@@ -80,6 +84,7 @@ server <- function(input, output, session) {
     )
 
 
+    # calendardim table
     output$calendarDimTable <- renderDT(
         calendarDim,
         style = "bootstrap",
@@ -99,6 +104,7 @@ server <- function(input, output, session) {
     )
 
 
+    # customerdim table
     output$customerDimTable <- renderDT(
         customerDim,
         style = "bootstrap",
@@ -118,6 +124,7 @@ server <- function(input, output, session) {
     )
 
 
+    # productdim table
     output$productDimTable <- renderDT(
         productDim,
         style = "bootstrap",
@@ -137,6 +144,7 @@ server <- function(input, output, session) {
     )
 
 
+    # salesfact table
     output$salesFactTable <- renderDT(
         salesFact,
         style = "bootstrap",
@@ -175,6 +183,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales/month graph
     output$salesPerMonthGraph <- renderPlot(
         salesPerMonth %>%
             ggplot(aes_string(
@@ -186,6 +195,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales/region graph
     output$salesPerRegionGraph <- renderPlot(
         salesPerRegion %>%
             ggplot(aes_string(
@@ -197,6 +207,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales/product graph
     output$salesPerProductGraph <- renderPlot(
         salesPerProduct %>%
             ggplot(aes_string(
@@ -209,6 +220,7 @@ server <- function(input, output, session) {
     )
 
 
+    # sales/salesperson graph
     output$salesPerSalesPersonGraph <- renderPlot(
         salesPerSalesPerson %>%
             ggplot(aes_string(
@@ -220,7 +232,8 @@ server <- function(input, output, session) {
     )
 
 
-    output$interactiveTable <- renderPlot(
+    # interactiveGraph
+    output$interactiveGraph <- renderPlot(
         allTables %>%
             ggplot(aes_string(
                 input$xVar,
@@ -228,6 +241,6 @@ server <- function(input, output, session) {
                 fill = input$xVar
             )) +
             geom_bar(stat = "identity") +
-                coord_flip()
+            coord_flip()
     )
 }

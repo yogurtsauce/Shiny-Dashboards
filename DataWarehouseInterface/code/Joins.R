@@ -29,9 +29,10 @@ salesPerSalesPerson <- inner_join(
     by = "SalesPersonKey"
 )
 
+
+# join all tables
 allTables <- salesFact %>%
     inner_join(calendarDim, by = "CalendarKey") %>%
     inner_join(customerDim, by = "CustomerKey") %>%
     inner_join(productDim, by = "ProductKey") %>%
     inner_join(salesPersonDim, by = "SalesPersonKey")
-

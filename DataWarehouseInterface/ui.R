@@ -3,6 +3,8 @@ library(shinythemes)
 
 source("code/ImportData.R")
 
+
+# Intro Page
 pageOne <- tabPanel(
     "Introduction",
     h1("Introduction"),
@@ -23,10 +25,12 @@ pageOne <- tabPanel(
     )
 )
 
-
+# Choices for graph inputs
 ychoices <- c("DollarsSold", "QuantitySold")
 xchoices <- c("Month", "Region", "ProductName", "SalesPersonName")
 
+
+# Visualization Tab
 pageTwo <- tabPanel(
     "Visualization",
     tabsetPanel(
@@ -46,6 +50,9 @@ pageTwo <- tabPanel(
                 )
             )
         ),
+
+
+        # sales per region
         tabPanel(
             "Sales / Region",
             sidebarLayout(
@@ -62,6 +69,9 @@ pageTwo <- tabPanel(
                 )
             )
         ),
+
+
+        # sales per product
         tabPanel(
             "Sales / Product",
             sidebarLayout(
@@ -78,6 +88,9 @@ pageTwo <- tabPanel(
                 )
             )
         ),
+
+
+        # sales per person
         tabPanel(
             "Sales / Sales Person",
             sidebarLayout(
@@ -94,6 +107,9 @@ pageTwo <- tabPanel(
                 )
             )
         ),
+
+
+        # interactive table
         tabPanel(
             "Interactive Table",
             sidebarLayout(
@@ -111,14 +127,14 @@ pageTwo <- tabPanel(
                     width = 3
                 ),
                 mainPanel(
-                    plotOutput("interactiveTable")
+                    plotOutput("interactiveGraph")
                 )
             )
         )
     )
 )
 
-
+# Operational table tab
 pageThree <- tabPanel(
     "Operational Tables",
     tabsetPanel(
@@ -130,6 +146,7 @@ pageThree <- tabPanel(
 )
 
 
+# data warehouse tab
 pageFour <- tabPanel(
     "Data Warehouse Tables",
     tabsetPanel(
@@ -142,6 +159,7 @@ pageFour <- tabPanel(
 )
 
 
+# load into the ui
 ui <- navbarPage(
     theme = shinytheme("darkly"),
     "Nicholas' Data Warehouse Project",
