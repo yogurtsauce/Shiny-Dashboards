@@ -10,12 +10,12 @@ pageOne <- tabPanel(
         widths = c(2, 10),
 
         # load tab panels into here
-        introduction,
-        dependencies,
-        dataPrep,
-        descriptiveAnalysis,
-        exploratoryAnalysis,
-        summary
+        introductionTab,
+        dependenciesTab,
+        dataPrepTab,
+        exploratoryAnalysisTab,
+        visualizationTab,
+        summaryTab,
     )
 )
 
@@ -25,8 +25,8 @@ pageTwo <- tabPanel(
     "Datasets",
     tabsetPanel(
         # load tab panels into here
-        ogDT,
-        cleanDT
+        originalDataTab,
+        cleanDataTab,
     )
 )
 
@@ -35,5 +35,5 @@ ui <- navbarPage(
     theme = shinytheme("darkly"),
     "Global Music Analysis",
     pageOne,
-    pageTwo
+    pageTwo,
 )

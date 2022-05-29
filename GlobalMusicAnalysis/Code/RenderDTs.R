@@ -1,6 +1,6 @@
 source("Code/Libraries.R")
 
-renderOGDT <- renderDT(
+originalDT <- renderDT(
     data,
     style = "bootstrap",
     filter = "top",

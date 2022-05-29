@@ -1,11 +1,11 @@
 source("Code/Libraries.R")
 
-ogDT <- tabPanel(
+originalDataTab <- tabPanel(
     "Original Dataset",
     dataTableOutput("originalData")
 )
 
-cleanDT <- tabPanel(
+cleanDataTab <- tabPanel(
     "Clean Dataset",
     dataTableOutput("cleanData")
 )
