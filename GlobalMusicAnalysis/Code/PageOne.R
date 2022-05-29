@@ -140,3 +140,11 @@ summaryTab <- tabPanel(
     h1("Summary"),
     tags$hr(style = "border-color: white;"),
 )
+
+
+# source code panel
+sourceCodeTab <- tabPanel(
+    "Source Code",
+    h1("Source Code"),
+    tags$hr(style = "border-color: white;"),
+)

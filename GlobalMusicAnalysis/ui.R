@@ -16,6 +16,7 @@ pageOne <- tabPanel(
         exploratoryAnalysisTab,
         visualizationTab,
         summaryTab,
+        sourceCodeTab,
     )
 )
 
@@ -34,6 +35,8 @@ pageTwo <- tabPanel(
 ui <- navbarPage(
     theme = shinytheme("darkly"),
     "Global Music Analysis",
+
+    # pages
     pageOne,
     pageTwo,
 )
