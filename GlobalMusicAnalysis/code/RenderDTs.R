@@ -1,5 +1,10 @@
+# load the libraries #
 source("Code/libraries.R")
 
+# variables with the DT options #
+
+
+dataTableTemplate  <- function()
 
 originalDT <- renderDT(
     data,

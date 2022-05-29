@@ -1,4 +1,6 @@
-source("Code/main.R")
+# load the libraries ##########################################################
+
+source("main.R")
 
 
 server <- function(input, output) {
