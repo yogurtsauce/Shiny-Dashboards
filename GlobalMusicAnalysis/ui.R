@@ -8,7 +8,19 @@ pageOne <- tabPanel(
 
 # page two
 pageTwo <- tabPanel(
-    "Dataset"
+    "Dataset",
+    fluidPage(
+        tabsetPanel(
+            tabPanel(
+                "Original Dataset",
+                dataTableOutput("originalData")
+            ),
+            tabPanel(
+                "Clean Dataset",
+                dataTableOutput("cleanData")
+            )
+        )
+    )
 )
 
 # load things into the ui
