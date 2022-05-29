@@ -147,4 +147,8 @@ sourceCodeTab <- tabPanel(
     "Source Code",
     h1("Source Code"),
     tags$hr(style = "border-color: white;"),
+    tags$a(
+        href = "https://github.com/yogurtsauce/Shiny-Dashboards/tree/master/GlobalMusicAnalysis",
+        "GitHub"
+    )
 )
