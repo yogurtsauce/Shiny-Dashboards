@@ -1,24 +1,40 @@
 source("Code/Main.R")
 
+
+
+
 # page one
 pageOne <- tabPanel(
-    "Home"
+    "Home",
+    navlistPanel(
+        "Navigation",
+        widths = c(2, 10),
+
+        # load tab panels into here
+        introduction,
+        dependencies,
+        dataPrep,
+        descriptiveAnalysis,
+        exploratoryAnalysis,
+        summary
+    )
 )
 
 
 # page two
 pageTwo <- tabPanel(
-    "Dataset",
-    fluidPage(
-        tabsetPanel(
-            tabPanel(
-                "Original Dataset",
-                dataTableOutput("originalData")
-            ),
-            tabPanel(
-                "Clean Dataset",
-                dataTableOutput("cleanData")
-            )
+    "Datasets",
+    tabsetPanel(
+        # original dataset
+        tabPanel(
+            "Original Dataset",
+            dataTableOutput("originalData")
+        ),
+
+        # cleaned dataset
+        tabPanel(
+            "Clean Dataset",
+            dataTableOutput("cleanData")
         )
     )
 )
