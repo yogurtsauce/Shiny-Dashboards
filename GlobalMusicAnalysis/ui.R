@@ -2,7 +2,6 @@ source("Code/Main.R")
 
 
 
-
 # page one
 pageOne <- tabPanel(
     "Home",
@@ -25,17 +24,9 @@ pageOne <- tabPanel(
 pageTwo <- tabPanel(
     "Datasets",
     tabsetPanel(
-        # original dataset
-        tabPanel(
-            "Original Dataset",
-            dataTableOutput("originalData")
-        ),
-
-        # cleaned dataset
-        tabPanel(
-            "Clean Dataset",
-            dataTableOutput("cleanData")
-        )
+        # load tab panels into here
+        ogDT,
+        cleanDT
     )
 )
 
