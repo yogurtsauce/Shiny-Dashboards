@@ -1,4 +1,4 @@
 # load the libraries #
-source("Code/libraries.R")
+source("code/libraries.R")
 
-data <- read_csv("Data/GlobalMusicData.csv", show_col_types = FALSE)
+data <- read_csv("data/GlobalMusicData.csv", show_col_types = FALSE)
