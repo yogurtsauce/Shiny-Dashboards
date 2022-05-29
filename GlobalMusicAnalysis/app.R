@@ -1,4 +1,4 @@
-source("Code/Libraries.R")
+source("Code/Main.R")
 
 options(shiny.autoreload = TRUE)
 runApp()

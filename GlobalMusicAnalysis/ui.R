@@ -1,10 +1,20 @@
-source("Code/Libraries.R")
+source("Code/Main.R")
+
+# page one
+pageOne <- tabPanel(
+    "Home"
+)
 
 
-
-
+# page two
+pageTwo <- tabPanel(
+    "Dataset"
+)
 
 # load things into the ui
-ui <- {
-    "Global Music Analysis"
-}
+ui <- navbarPage(
+    theme = shinytheme("darkly"),
+    "Global Music Analysis",
+    pageOne,
+    pageTwo
+)
