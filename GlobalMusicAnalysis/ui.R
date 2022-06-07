@@ -14,7 +14,6 @@ pageOne <- tabPanel(
         dependenciesTab,
         dataPrepTab,
         exploratoryAnalysisTab,
-        visualizationTab,
         summaryTab,
         sourceCodeTab,
     )
